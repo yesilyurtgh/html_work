@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medya Etiketleri</title>
+</head>
+<body>
+    <h3>Medya Etiketleri</h3>
+    <p>
+        Ses dosyaşarı için <strong>audio</strong> etiketi ve videolar için <strong>video</strong> etiketi kullanılır. <br>
+        Hem audio hemde video etiketleri için ortak kullanılan özellikler vardır. <br><br>
+        <strong>controls özelliği</strong> medya üzerinde başlatma, durdurma gibi kontrolleri yapabilmek için her hangi bir değeri olmadan sadece controls yazarak control düğmelerinin görüntülenmesi sağlanabilir. <br><br>  
+        <strong>loop özelliği</strong> medyanın bittikten sonra baştan başlaması için, değer olmaksızın loop yazarak sürekli yeniden başlama döngüsü oluşturulabilir.  <br><br>  
+        Her iki etiketin içinde <strong>source etiketi</strong> kullanılmak zorundadır. <br>
+        source etiketinin içinde <strong>src=""</strong> ve <strong>type=""</strong> özellikleri tanımlanmalıdır. <br>
+        <strong>src=""</strong> özelliğine medyanın adı, uzantısı ile yazılmalı. ( Medya dosyamızın içinde kayıtlı olmalı) <br>
+        <strong>type=""</strong> özelliğine; <br>
+        ses dosyalarında genelde <u>audio/mpeg</u> değeri, <br>
+        video dosyalarına <u>video/mp4</u> değeri kullanılır.
+    </p>
+
+    <p>
+        Wednesday çello mp3 <br>
+        youtube'ta dinlemek için <a href="https://www.youtube.com/watch?v=DPmCtGN_pQg&t=8s" target="_blank">buraya</a> tıkalyın. <br>
+
+        <audio controls >
+            <source src="wednesday.mp3" type="audio/mpeg">
+            Tarayıcınız desteklemiyor.
+        </audio>
+    
+    </p>
+
+    <h4>video etiketi</h4>
+    <p>
+        Yukarıdakilerin yanında videonun <strong>poster</strong>  ve <strong>track</strong> özellkleri verdır. <br>
+        poster özelliği video başlamadan görünen resimdir.  <br>
+        <strong>track etiketi</strong> videoya altyazı eklememizi sağlar. <br>
+        <strong>src özelliğine</strong> altyazının adı uzantısı ile birlikte yazılır. <br>
+        <strong>kind özelliğine</strong> tür olarak "subtitles yazılır" <br>
+        <strong>srclang özelliğine</strong> hangi dilin altyazısı olduğu yazılır. "tr" yada "eng" gibi <br>
+        <strong>label özelliğine</strong> altyazı menüsünde görünecek ismi yazıyoruz. <br>
+        videonun boyutları <strong>width</strong>  ve <strong> height</strong> özellikleri ile ayarlanabilir. <br>
+        <strong>title etiketi</strong> ile mause videonun üzerinde açıklama kutucuğu çıkartılabilir. <br>
+
+        <video width="360" height="240" controls poster="poster.jpg" title="Çocuklarına algoritmayı öğreten baba" >
+            <source src="father_learn_alg.mp4">
+            <track src="tr.vtt" kind="subtitles" srclang="tr" label="türkçe" default/> 
+            Tarayıcınız desteklemiyor.
+        </video>
+        <p>
+            videonun alt yazı dosaysı lokalde çalışınca görüntülenemiyor. videoyu <cite>youtube</cite>'tan izlemek için 
+            <a href="https://www.youtube.com/watch?v=xoqQKFtfzvM" target="_blank">buraya</a> tıklayabilirsiniz.
+        </p>
+    </p>
+</body>
+</html>

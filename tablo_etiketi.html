@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablo Etiketi</title>
+</head>
+<body>
+    <h3>Tablo Etiketi</h3>
+    <p>
+        Tablolar table etketi ile oluşturulurlar. <br>
+        Genel olarak tablolar 3 kısımdan oluşur. <br> 
+        Başlıkların olduğu <strong>thead</strong> , verilerin olduğu <strong>tbody</strong>  ve en alttaki <strong>tfoot</strong> kısımlarından oluşur. <br>
+        Satırlar <strong>tr</strong>  etiketi ile, sutunlar <strong>td(başlık ise th)</strong> etiketi ile tanımlanır. <br>
+        <strong>th</strong> ile tanımlanan sütunlar kalın ve ortalanmış olarak yazdırılır.
+        table içinde caption etiketi ile tabloya başlık eklenebilir.
+    </p>
+    <table border="1">
+        <caption>Table Yapısı</caption>
+        <thead>
+            <tr>
+                <th>
+                    thead
+                </th>
+                <th>
+                    başlıkların yer aldığı üst bölüm
+                </th>
+            </tr>
+
+        </thead>
+        
+        <tr>
+            <td>
+                tbody
+            </td>
+            <td>
+                verilerin yer aldığı orta bölüm
+            </td>
+        </tr>
+        <tr>
+            <td>
+                tfoot 
+            </td>
+            <td>
+                sonuç yada toplamın olduğu son bölüm
+            </td>
+        </tr>
+    </table>
+
+    <h3>colspan ve rowspan</h3>
+    <p>
+        <strong>colspan</strong> aynı satırdaki istenen sayıdaki hücreyi(sütun öğesini) birleştirmek için kullanılır. <br>
+        td içinde bir özellik olarak kullanılır. <br>
+        <u>Kullanıldığı td'den (hücreden) başlayarak</u>  sağa doğru birlesltirir. <br> <br>
+        Aşağıdaki tabloda tfoot içindeki tr içindeki td etiketine colspan="2" değeri verilince o satırdaki 2 hücre yani sütun birleşmiş oldu. <br><br>
+      
+        <strong>rowspan</strong> aynı sütundaki istenen sayıdaki hücreyi(satır öğesini) birleştirmek için kullanılır. <br>
+        td içinde bir özellik olarak kullanılır. <br>
+        <u>Kullanıldığı td'den (hücreden) başlayarak</u>  aşağı doğru birlesltirir.
+   
+          <table border="1">
+            <caption>Maaş Çizelgesi</caption>
+            <thead>
+                <tr>
+                    <th>
+                        Ay
+                    </th>
+                    <th>
+                        Maaş
+                    </th>
+                    <th>
+                        Fazla Mesai
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        Ocak
+                    </td>
+                    <td>
+                        10.000 TL
+                    </td>
+                    <td rowspan="4">
+                        Sabit <br>her ay <br>1000 TL
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Şubat
+                    </td>
+                    <td>
+                        10.000 TL
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Mart
+                    </td>
+                    <td>
+                        11.000 TL
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Nisan
+                    </td>
+                    <td>
+                        11.000 TL
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2">
+                        TOPLAM:42.000TL
+                    </td>
+                    <td>
+                        4.000 TL
+                    </td>
+                    <td>
+                        46.000 TL
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </p>
+    <p>
+         </p>
+</body>
+</html>

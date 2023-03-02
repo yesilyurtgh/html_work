@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form Etiketleri</title>
+</head>
+<body>
+    <h3>Form Etiketleri</h3>
+    <h4>input Etiketi</h4>
+    <p>
+        Kullanıcudan veri almamızı sağlayan etikettir. <br>
+        <strong>name</strong> özelliği mutlaka kullanılmalıdır. Çünkü girilen veri yazılım dili ile alınırken name özelliği kullanılır. <br>
+        <strong>placeholder</strong> inputa silik yazı ile açiklama yada ipucu yazılmasını sağlar. Kullanıcı yazacağı zaman silinir. Aşağıda password inputunda bu özelliği kullandım. <br>
+        <strong>autofocus</strong> özelliği sayfa açılınca imlecin ilk gözükmesini istediğimiz yere yazarız. Mesela <cite>youtube</cite>'u ilk açtığımızda arama inputuna focus olur. <br>
+        <strong> required</strong> özelliğin inputun doldurulmadan gönderilememesini sağlar. Ayrıca type türüne göre uygun veri girilip girilmediğini denetler.Örneğin type ="email" ise @ işareti kullanılmamışsa formu göndermez. <br><br>
+        
+        <strong>disabled</strong> özelliği bizim formda verdiğimiz değerin kullanıcı tarafından değştirilemez olmasını sağlar.Aşağda iki text inputndan ikincisinde disabled özelliği eklenmiştir. <br>
+        <strong>readonly</strong> özelliği disabled ile aynı işi yapar. Aradaki fark form gönderilirken readonly içindeki değer form ile gönderilir. Ama disabled'ta yok sayılır. Çoğunlukla readonly kullanılır. <br>
+       
+        <strong>type</strong> özelliği bir çok farklı şekilde bulunabilir.<br>
+        
+
+        Varsayılan type değeri "text" tir. Normal yazı yazılması içindir. value ile varsayılan bir değer tanımlanabilir. <br>
+        
+        <input type="text" value="type text olunca böyle olur">   <br>
+        <input disabled type="text" value="type text ve disabled olunca  böyle olur">  <br>
+        <input readonly type="text" value="type text ve readonly olunca  böyle olur">  <br>
+       
+        type="password" değeri yazının gizlenmesini sağlar. <input placeholder="Sifre gizlenir" type="password"> <br>
+        type="file" kullanıcıya dosya seçtirmek için kullanılır. multiple özelliğide eklenirse birden fazla dosya seçilebilir. accept özelliği ile hangi dosya türlerini seçebileceğimizi belirtebiliriz. <input type="file" accept="image/*"> <br>
+        type="checkbox" onaylama kutucuğudur. <br>
+        checked özelliği eklenirse varsayılan olarak check edilmiş olarak açılır. <input type="checkbox" checked> Okudum anladım. <br>
+        <br>
+        <hr>
+        Burada <Strong>Label Etiketi</Strong>ni anlatmak iyi olur. Yukardaki checkbox'u onaylamak için kutucuğun  içine tıklamak gerekir. "Okudum anladım" yazısına tıklayınca da checkbox'un seçilmesi için label etiketi kullanılabilir. <br>
+        label etiketinin iki farklı şekilde kullanabiliriz. <br>
+        İlk yöntem label etiketinin içine inputu koyarak yapılan kullanımdır. 
+        <label >
+            <input type="checkbox"> Okudum anladım <br>
+    
+        </label>
+        İkinci yöntem ise input'un id'sine ve label'ın for'una aynı değer verilerek yapılabilir. Bu durumda label içinde kalan yazıya tıkalnınca checkbox check olur.
+        
+        <input id="cb" type="checkbox" >
+        <label for="cb">Okudum anladım</label><br>
+        Labeli diğer type'lar içinde kullanabiliriz. 
+        <hr>
+
+        type="submit" bir gönderme butonudur. value="" değeri ile butonun üzerindeki yazı belirlenebilir.
+         <input type="submit" value="GÖNDER"> <br>
+        type="radio" cinsiyet gibi sadece birinin seçilmesi gereken durumlarda kullanılır. Aşağıda kadın ve erkek inputlarının name özelliğine "cinsiyet" diye ortak bir değer verdim. böylece kadın ve erkek inputlarını bir gurup yaptım ve sadece birinin seçilebilmesini sağladım.
+
+        <label >
+            <input type="radio" name="cinsiyet" > Erkek
+        </label>
+        <label >
+            <input type="radio" name="cinsiyet" > Kadın
+        </label> <br>
+        type="reset" bir sıfırlama butonudur. Formu ilk ve boş haline döndürür. value özelliği ile ismi değiştirilebilir. <input type="reset" value="SIFIRLA"> <br>
+        <br>
+        Diğer type türleride şunlardır. <br>
+        color <input type="color"> <br>
+        date <input type="date"> <br>
+        number min="10" max="20" <input type="number" min="10" max="20"> <br>
+        range min="0" max="100" step="5" <input type="range" min="0" max="100" step="5" > <br>
+        tel <input type="tel"> <br>
+        email <input type="email"> <br>
+        url <input type="url"> <br>
+    </p>
+
+    <h4>Datalist</h4>
+    <p>
+        Açılıp kapanan bir menü oluşturup içine seçenekler ekleyebilmemizi sağlar. <br>
+        Bunun için öce bir input oluşturup list="" özelliğine bir değer veririz. <br>
+        Daha sonra bir datalist etiketi açıp id="" özelliğine inputun list'ine verdiğimiz değeri veririz. böylece input ve datalisti ilişkilendirmiş oluruz. <br>
+        Sonra datalistin seçeneklerini yazmak için option etiketini kullanırız. <br>
+        <input list="dersler">
+        <datalist id="dersler">
+            <option value="Türkçe" ></option>
+            <option value="İngilizce"></option>
+            <option value="Tarih"></option>
+        </datalist> <br>
+
+    </p>
+    <h4>form Etiketi</h4>
+
+    <p>
+        inputları bir form etiketinin içine yazarak kullanıcıya bir form oluşturulabilir. <br>
+        <strong>action ve method </strong>özellikleri formun özellikleri olup yazılım dilleri ile kullanılırlar. <br>
+        
+    </p>
+    <hr>
+    input elemanları genelde bir form oluşturmak ve formu göndermek için kullanırlır. Ancak formu gönderirken form içinde bulunmayan bazı input elemanları olabilir. bunlarıda form içindeymiş gibi göndermek için inputa bir form özelliği ekleyip değer olarak form'un id'sini vermeliyiz. <br>
+    <hr>
+
+    <h4>Select etiketi</h4>
+    <p>
+        Datalist ile benzer bir işlevi vardır. Açılıp kapanan bir menüde seçenekler çıkarmamıza yarar. Kullanımı daha kolaydır. <br>
+        Önce select etiketi açılır. name="", autofocus="", disabled, required, multiple, form özelliklerini alabilir. <br>
+        Her seçenek için bir option etiketi açılıp kapatılmalı ve seçenek yazılmalıdır. <br>
+        Optionun value değeri yazılım dilinin alacağı değerdir. Görüntülenecek isim iki etiket arasına yazılır.  <br>
+        Optionlardan birine selected özelliği verilerek varsayılan bir değer belirtebiliriz. 
+        <select name="ders" id="dersler" >
+            <option value="matematik" >Matematik</option>
+            <option value="cografya" selected >Coğrafya</option>
+            <option value="kimya">Kimya</option>
+            <option value="tarih" >Tarih</option>
+            <option value="fizik">Fizik</option>
+            <option value="biyoloji">Biyoloji</option>
+        </select> 
+        <br>
+    
+        Select'e size="" özelliği verilerek açılacak pencerede kaç seçeneğin görüneceğini belirtebiliriz. Aşağıda 4 değerini verdim. <br>
+        <select name="ders" id="dersler" size="4">
+            <option value="matematik" selected>Matematik</option>
+            <option value="cografya">Coğrafya</option>
+            <option value="kimya">Kimya</option>
+            <option value="tarih" >Tarih</option>
+            <option value="fizik">Fizik</option>
+            <option value="biyoloji">Biyoloji</option>
+        </select> 
+        <br>
+        Seçenekleri guruplamak için Optgroup etiketi içinde yazabliriz. Optgroup etiketine label özelliği vererek başlığı yazabiliriz. 
+        <select name="dersler" id="dersler">
+            <optgroup label="Sayısal Dersler">
+                <option value="matematik"> Matematik</option>
+                <option value="fizik"> Fizik</option>
+                <option value="kimya"> Kimya</option>
+                <option value="biyoloji"> Biyoloji</option>
+            </optgroup>
+            <optgroup label="Sözel Dersler" >
+                <option value="türkçe">Türkçe </option>
+                <option value="tarih">Tarih </option>
+                <option value="cografya">Coğrafya </option>
+            </optgroup>
+        </select>
+
+        <h4>Textarea Etiketi</h4>
+        <p>
+            Kullanıcıdan uzun bir yazı almak için kullanılır. row ve column değerleri ile boyutlandırılabilir. <br>
+            Düşüncelerinizi yazın... <br>
+            <textarea name="" id="" cols="30" rows="10" ></textarea>
+        </p>
+
+        <h4>fieldset Etiketi</h4>
+        <p>
+            Form elemanlarının guruplamak için kullanılır. legend etiketi ile başlık verebiliriz.
+            <form action="">
+            <fieldset >
+                <legend>Tanışma Formu</legend>
+                Adınız: <input type="text" required> <br>
+                Yaşınız : <input type="number" min="18" required placeholder="18 yaşından büyük olmalısınız" ><br>
+                Katılmak istediğiniz kurs: <input type="text" readonly value="HTML"> <br>
+                Daha önce eğitim aldınız mı?
+                <label >
+                    <input type="radio" name="ed">Evet
+                </label>
+                <label >
+                    <input type="radio" name="ed">Hayır
+                </label> <br>
+                Bizi nereden duydunuz? 
+                <select >
+                    <option value="twitter">Twitter</option>
+                    <option value="facebook">Facebook</option>
+                    <option value="instagram">İnstagram</option>
+                </select> <br>
+                Öneri yada istekleriniz nelerdir? <br>
+                <textarea cols="30" rows="10"></textarea>
+
+                <input type="submit" value="GÖNDER">
+                <input type="reset" value="SIFIRLA">
+
+            </fieldset>
+        </form>
+        </p>
+
+   
+
+</body>
+</html>

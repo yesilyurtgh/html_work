@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iframe</title>
+</head>
+<body>
+    <h3>iframe etiketi</h3>
+    <p>
+        Kendi web sayfamızda başka bir web sayfasını görüntüleyebilmemizi sağlar. <br>
+        <strong>frameborder</strong> özelliği ile kenarlık kalınlığı belirlenebilir. <br>
+        width ve height ile alan belirlenir. <br>
+        Göstermek isediğimiz web sitesinin buna izin vermiş olması gerekir. <br>
+        Aşağıdaki örnekte google'ı göstermek istedim ama google buna izin vermediği için görüntülenemedi. <br>
+        <iframe width="260" frameborder="5" height="400" src="https://google.com" frameborder="0"></iframe> <br> <br>
+        Aşağıda istanbul üniversitesinin sayfasını kendi sayfamda görüntüledim. <br><br>
+        <iframe  height="400" src="https://www.istanbul.edu.tr/tr/_" frameborder="0"></iframe> <br>
+        
+    </p>
+    <hr>
+
+    <p>
+        Başka web sitelerini görüntüleyebildiğimiz gibi kendi web sayemizin başka sayfalarını da mevcut sayfada görüntüleyebiliriz. <br>
+        Örnek olarak bu projedeki link etiketleri sayfasını aşağıda görüntüledim. <br><br>
+        <iframe src="http://127.0.0.1:5500/link_etiketi.html" frameborder="0"></iframe> 
+        sayfaya gitmek için <a href="http://127.0.0.1:5500/link_etiketi.html" target="_blank">buraya </a> tıklayabililrsiniz.
+    </p>
+
+    <hr>
+
+    Ayrıca bir iframe içinde farklı adresleri görüntüleyebiliriz. <br> <br>
+    Bunun için a etiketinde belirtilen linklere aynı terget değeri verilerek bir nevi ortak bir liste içine alınırlar. Daha sanra iframe'in <b>name</b> özelliğine target'a verdiğimiz değeri veririz. Aşağıda 3 tane faklı üniversitesinin linkleri a etiketi ile tanımlayıp hepsinin taget değerini "uni" olarak belirttim. ıframe'ede name olarak uni yazdım. <br><br>
+
+    
+    <a href="https://www.istanbul.edu.tr/tr/_" target="uni"> İstanul Üniversitesi </a>   - 
+    <a href="https://ege.edu.tr/tr-0/anasayfa.html" target="uni"> Ege Üniversitesi </a>    -
+    <a href="https://www.boun.edu.tr/" target="uni"> Boğaziçi Üniversitesi </a>
+   <br><br>
+   <iframe name="uni" height="400" src="https://www.istanbul.edu.tr/tr/_" frameborder="0"></iframe> 
+       
+    <hr>
+    <p>
+        <strong>sandbox</strong> özelliği kullanılıp değer verilmediğinde web sitesi görüntülense bile hiç bir özelliğin çalışmamasını sağlar. Eğer bazı özelliklerin çalışmasını istersek <a href="https://www.w3schools.com/tags/att_iframe_sandbox.asp"> bu sitede </a> belirtilen değerleri vererek istediğimiz özelliği hariç tutabiliriz.
+    </p>
+   
+    
+
+</body>
+</html>

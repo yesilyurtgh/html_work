@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resim Etiketi</title>
+</head>
+<body>
+    <h3>img etiketi</h3>
+    <p>
+        <strong>img etiketi</strong> kapatılan etiketlerden değildir. Sadece &ltimg&gt olarak kullanılır ve kapatılmaz. <br> 
+        Sayfamıza resim eklemek için kullanırız. <br> 
+        src , title , alt , width ve height en çok kullanılan özelliklerdendir. 
+    </p>
+    <h4>src özelliği</h4>
+    <p>
+        Bu özelliğe dosyamızda kayıtlı olan resmin adını uzantısı ile yazarız. <br> 
+        Resim adında turkçe karakter olmaması tavsiye edilir. <br>
+        <img src="html.png">
+    </p>
+
+
+    <h4>alt özelliği</h4>
+    <p>
+        <strong>alt özelliği</strong> sayfamızın resime ulaşamaması ve resmin görüntülenememesi durumunda resim yerine göstermek istediğimiz açıklamayı girdiğimiz özelliktir. <br>
+        Aşağıdaki örnekte resim adını yanlış yazıp alt ile belirttiğim yazının görüntülenmesini sağladım. <br><br>
+        <img src="html.pn" alt="src'de belirttiğim isim eksik olduğu için bu açıklama yazısı çıkıyor">
+    </p>
+    <p>
+        <strong>title etiketi</strong> mausun resim üzerine gelince küçük bir kutucuk içinde göstermek istediğimiz açıklamayı yazdığımız özelliktir. <br>
+        Aşağıdaki resimde bu özellik kullanılmıştır.
+        <img src="html.png" title="Burda istenen açıklama yazılabilir">
+    </p>
+    <h4>width ve height özellikleri</h4>
+    <p>
+        width genişlik, height'te yükseklik ayarı içindir. <br>
+        Sadece width ayarlandığında, height çözünürlük bozulmayacak şekilde kendini ayarlar. <br> 
+        Tersi durumda da width kendini otomatik olarak ayarlar. <br> 
+        <img src="html.png" width="50px" title="Sadece width='50px' olarak ayarlandı">
+        <img src="html.png" height="70px" title="Sadece height='70px' olarak ayarlandı">
+        <img src="html.png" width="50px" height="70px" title="width='50px' ve height='70px' olarak ayarlandı">
+        <img src="html.png" width="150px" height="60px" title="width='150px' ve height='60px' olarak ayarlandı">
+        
+    </p>
+    <h4>NOT</h4>
+    <p>
+        Resimler bir a etiketinin içine yazılarak tıklanma özelliği verilebilir. 
+        <a href="https://google.com/"  target="_blank">
+            <img src="html.png" title="google'a gitmek için bu resme tıkalyın">
+        </a>
+    </p>
+
+
+
+
+
+    
+</body>
+</html>
