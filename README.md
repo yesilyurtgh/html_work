@@ -1,3 +1,2 @@
-# html_work
-Notes I took while working on html tags
+# html Çalışma Notlarım
 Html etiketlerine çalışırken aldığım notlardır.
